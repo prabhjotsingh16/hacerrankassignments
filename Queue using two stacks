@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Stack<Integer> s1=new Stack<Integer>();
+        Stack<Integer> s2=new Stack<Integer>();
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            int opr=sc.nextInt();
+            if(opr==1)
+            {
+                
+                s1.push(sc.nextInt());
+            }
+            else if(opr==2){
+                if(s2.isEmpty()){
+                while(!s1.isEmpty())
+                    {
+                        s2.push(s1.pop());
+                    }
+                }
+                if(!s2.isEmpty())
+                      s2.pop();
+                }
+
+         
+            else{
+                if(s2.isEmpty()){
+                   while(!s1.isEmpty())
+                    {
+                        s2.push(s1.pop());
+                    }
+                   System.out.println(s2.peek());
+                  }
+                else
+               System.out.println(s2.peek());
+            }
+               
+        }
+    }
+}
+    
